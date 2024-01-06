@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <!-- <p>dkdkdk</p> -->
+    <div>
+        <form action="" [formGroup]="DateFormgroup">
+            
+        <!-- <mat-form-field dateFormat2 class="smallinput spacingForm" style="margin-top: -2%;">
+            <mat-label> Month </mat-label>
+            <input matInput [matDatepicker]="dp" [formControl]="monyear" placeholder="Month and Year"
+              formControlName="monthyear" />
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp startView="multi-year" (yearSelected)="chosenYearHandler($event)"
+              (monthSelected)="chosenMonthHandler($event, dp)" panelClass="example-month-picker">
+            </mat-datepicker>
+          </mat-form-field> -->
+          <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle class="toggle" matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+          </mat-form-field>
+        </form>
+    </div>
+    <div class="mt-5">
+        <table class="table table-dark border text-center">
+            <tbody>
+                <tr *ngFor="let d of data" style="height: 80px;">
+                    <td class="border padding" >{{d.name}}</td>
+                    <td class="border padding">{{d.age}}</td>
+                    <td class="border padding">{{d.Place}}</td>
+                    <td class="border padding">{{d.Pincode}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

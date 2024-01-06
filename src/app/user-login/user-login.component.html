@@ -1,0 +1,29 @@
+<div class="main">
+    <div class="alert alert-warning col-2 float-right mt-5 pl-4 fix" style="margin-right: 70px;"  role="alert" *ngIf="name"><mat-icon>warning</mat-icon><span class="pl-1">{{output}}</span></div>
+    <div class="container">
+        <div class="card cards  col-4  border-dark">
+            <h1 class="text-center mt-2 font ">LOGIN</h1>
+            <form action="" [formGroup]="userlogin">
+                <div class="form-group">
+                    <label class="h5" for="">Name</label>
+                    <input type="text" name="name" class="form-control bg-none" placeholder="Enter username" formControlName="username">
+                </div>
+                <div class="form-group">
+                    <label class="h5" for="">Password</label>
+                    <input type="text" name="password" class="form-control" placeholder="Enter password" formControlName="password">
+                </div>
+                <div>
+                   <button class="btn btn-primary float-right mb-3" [disabled]="!userlogin.valid" (click)="signUp()">Sign In</button>
+                </div>
+            </form>
+        </div>  
+        <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+          
+    </div>
+</div>
+<!-- style="width: 150px; margin-top:30px;height:100px" -->

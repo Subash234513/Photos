@@ -1,0 +1,30 @@
+<!-- <iframe autoplay src="https://www.youtube.com/embed/6bg5tM2jmUU?autoplay=1&loop=1&mute=1&controls=0" [frameBorder]="0" allowFullscreen></iframe> -->
+<!-- <video  >
+    <source src="./assets/TOXIC_Rocking_Star_Yash_Geetu_Mohandas_KVN_Productions__6bg5tM2jmUU_247.webm" type="video/webm">
+</video> -->
+<!-- <iframe  src=" " [frameBorder]="0"></iframe> -->
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255747.55411418498!2d80.04381089666022!3d13.049472126023629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1702732323695!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<!-- <div class="movie">
+    <h1 class="text-white">Movie</h1>
+    <p class="text-white" style="width: 400px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel illum maiores quo totam et. Odit ea aspernatur corporis fugiat impedit quam atque facilis debitis nam cum beatae consectetur, animi cupiditate?</p>
+</div> -->
+<mat-form-field appearance="outline">
+    <mat-chip-list #chiplist>
+        <mat-chip *ngFor="let chip of ChipDropdown" (removed)="remove(chip)" [selectable]="true" [removable]="true">
+            {{chip}}
+            <mat-icon matChipRemove>remove</mat-icon>
+        </mat-chip>
+        <input matInput [matAutocomplete]="auto" [formControl]="autocomplete" [matChipInputFor]="chiplist" [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="Option($event)" [displayWith]="displayW">
+        <mat-option *ngFor="let data of Dropdown" [value]="data">
+            {{data.name}}
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+<div >
+    <h2>Removed List</h2>
+    <div class="Remove" *ngFor="let data of RemoveChip">
+        <div>{{data}}</div>
+    </div>
+</div>

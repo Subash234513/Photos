@@ -1,0 +1,134 @@
+<div class="main">
+    <div class="left">
+    </div>
+    <div class="right">
+        <div class="navbar-center navbar-light navbar-expand head">
+            <ul class=" navbar-nav ml-auto d-flex">
+              <li class="nav-item"><a class="nav-link" >Mapping</a></li>
+              <li class="nav-item"><a class="nav-link" (click)="segment()" style="cursor:pointer">Segment</a></li>
+              <li class="nav-item"><a class="nav-link" >Grade</a></li>
+            </ul> 
+            <!-- <app-segment-master></app-segment-master>
+            <app-segment-add></app-segment-add> -->
+          </div>
+          <div *ngIf="segmentMaster">
+            <h1>Segment Master</h1>
+            <div class="slide">
+                <div class="segment">
+                    <mat-form-field appearance="outline" class="">
+                        <mat-label>Segment Name</mat-label>
+                        <input matInput class="segment" [formControl]="SegmentName">
+                    </mat-form-field>
+                </div>
+                <div class="card search click" (click)="SegmentNameFun()">
+                    <mat-icon>search</mat-icon>
+                </div>
+                <div class="clear">
+                    <button class="btn card click" (click)="clear()">clear</button>
+                </div>
+                <div class="add" (click)="add()"> <mat-icon>add</mat-icon></div>
+            </div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>S.no</th>
+                            <th>Segment Name</th>
+                            <th>Component Type</th>
+                            <th>Type</th>
+                            <th>Percentage</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let l of list;let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{l?.name}}</td>
+                            <td>{{l?.component_type?.name}}</td>
+                            <td>{{l?.type.name}}</td>
+                            <td>{{l?.percentage}}</td>
+                            <td (click)="edit(l)"><mat-icon style="cursor:pointer" >edit</mat-icon></td>
+                            <td (click)="delete(l.id)"><mat-icon style="cursor:pointer">delete</mat-icon></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+          <div class="col-12" *ngIf="segmentAdd">
+            <h1>Segment Add</h1>
+            <form action="" [formGroup]="user">
+                <div class="display">
+                    <div class="">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control height" formControlName="name">
+                    </div>
+                    <div class="">
+                        <label for="pay.id" class="d-block">Pay Component Type</label>
+                        <mat-form-field appearance="outline" class="option" >
+                            <mat-select formControlName="component_type">
+                                <mat-option *ngFor="let pay of componentType" [value]="pay.id">{{pay.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="">
+                        <label for="" class="d-block">Bonus Type</label>
+                        <mat-form-field appearance="outline" class="option" >
+                            <mat-select formControlName="type">
+                                <mat-option *ngFor="let bonus of types" [value]="bonus.id">{{bonus.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="">
+                        <label for="">Percentage</label>
+                        <input type="text" class="form-control height" formControlName="percentage">
+                    </div>
+                </div>
+                
+            </form>
+            <div class="display">
+                <button class="btn btn-light" (click)="cancel()">Cancel</button>
+                <button class="btn btn-light" (click)="submit()" [disabled]="!user.valid">Submit</button>
+            </div>
+          </div>
+          <div *ngIf="SegmentEdit">
+            <h1>Segment Edit</h1>
+            <form action="" [formGroup]="editUser">
+                <div class="display">
+                    <div class="">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control height" formControlName="name">
+                    </div>
+                    <div class="">
+                        <label  class="d-block">Pay Component Type</label>
+                        <mat-form-field appearance="outline" class="option" >
+                            <mat-select formControlName="component_type">
+                                <mat-option *ngFor="let pay of componentType" [value]="pay.id">{{pay.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="">
+                        <label for="" class="d-block">Bonus Type</label>
+                        <mat-form-field appearance="outline" class="option" >
+                            <mat-select formControlName="type">
+                                <mat-option *ngFor="let bonus of types" [value]="bonus.id">{{bonus.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="">
+                        <label for="">Percentage</label>
+                        <input type="text" class="form-control height" formControlName="percentage">
+                    </div>
+                </div>
+                
+            </form>
+            <div class="display">
+                <button class="btn btn-light" (click)="cancel()">Cancel</button>
+                <button class="btn btn-light" (click)="update()" [disabled]="!editUser.valid">Update</button>
+            </div>
+          </div>
+    </div>
+    
+    
+</div>

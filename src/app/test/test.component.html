@@ -1,0 +1,60 @@
+<div class="container mt-5">
+    <div class="h2">Student Form</div>
+    <div class="card p-5">
+
+    <form action="" [formGroup]="TestGroup" >
+        <div class="col-12 row">
+            <div class="form-group col-6">
+                <label>Name</label>
+                <input type="text" formControlName="Name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group col-6">
+                <label>Age</label>
+                <input type="number" formControlName="Age" class="form-control" placeholder="Age">
+            </div>
+        </div>
+        <div class="col-12 row">
+            <div class="form-group col-6">
+                <label>Place</label>
+                <input type="text" formControlName="Place" class="form-control" placeholder="Place">
+            </div>
+            <div class="form-group col-6">
+                <label>Work</label>
+                <input type="text" formControlName="Work" class="form-control" placeholder="Work">
+            </div>
+        </div>
+        <div class="float-right mr-5 mt-2">
+            <button class="btn btn-primary" (click)="Submit()" [disabled]="!TestGroup.valid">Submit</button>
+            <button class="btn btn-danger ml-2" (click)="update()">update</button>
+        </div>
+        
+    </form>
+  
+</div>
+<table class="table border mt-2">
+    <thead class="bg-dark text-white">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Place</th>
+            <th>Work</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <!-- <th>Update</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let l of list let i=index">
+            <td>{{i+1}}</td>
+            <td>{{l.Name}}</td>
+            <td>{{l.Age}}</td>
+            <td>{{l.Place}}</td>
+            <td>{{l.Work}}</td>
+            <td (click)="Edit(l,i)" style="cursor:pointer;color:green">Edit</td>
+            <td (click)="Delete(i)" style="cursor:pointer;color:red">Delete</td>
+            <!-- <td (click)="update(i)" style="cursor:pointer;color:orange">Update</td> -->
+        </tr>
+    </tbody>
+</table>
+</div>
