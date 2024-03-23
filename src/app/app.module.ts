@@ -28,6 +28,11 @@ import { FrameComponent } from './frame/frame.component';
 import { AnimationComponent } from './animation/animation.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { ExcelUploadComponent } from './excel-upload/excel-upload.component';
+import { RegionMasterComponent } from './region-master/region-master.component';
+import { ElementComponent } from './element/element.component';
+import { PhotosShowerComponent } from './photos-shower/photos-shower.component';
+import { DbtScreenComponent } from './dbt-screen/dbt-screen.component';
+// import { CharttComponent } from './chartt/chartt.component';
 // import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
@@ -44,8 +49,14 @@ import { ExcelUploadComponent } from './excel-upload/excel-upload.component';
     FrameComponent,
     AnimationComponent,
     NgClassComponent,
+    RegionMasterComponent,
     ExcelUploadComponent,
+    ElementComponent,
+    PhotosShowerComponent,
+    DbtScreenComponent,
+    // CharttComponent,
     // HomeComponent,
+    
   ],
   imports: [
     BrowserModule,

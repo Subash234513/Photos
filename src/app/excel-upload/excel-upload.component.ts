@@ -19,7 +19,8 @@ export class ExcelUploadComponent implements OnInit {
   @ViewChild('labelImport')  labelImport: ElementRef;
   name:any
   ngOnInit(): void {
-    this.name=this.shared.get()
+    this.name=this.shared.emp.value
+    alert(this.name)
   }
   images:any
   uploadForms:FormGroup;

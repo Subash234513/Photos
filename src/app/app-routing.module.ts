@@ -6,15 +6,17 @@ import { MappingComponent } from './mapping/mapping.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { NavComponent } from './nav/nav.component';
 import { GradeComponent } from './grade/grade.component';
+import { ExcelUploadComponent } from './excel-upload/excel-upload.component';
 
 
 const routes: Routes = [
   {path:'SegmentMaster',component:SegmentMasterComponent},
-  {path:'',component:UserLoginComponent},
+  {path:'d',component:UserLoginComponent},
   {path:'UserLogin',component:UserLoginComponent},
   {path:'nav',component:NavComponent},
   {path:'mapping',component:MappingComponent},
-  {path:'grade',component:GradeComponent}
+  {path:'',component:GradeComponent},
+  {path:'excel',component:ExcelUploadComponent}
 ];
 
 @NgModule({

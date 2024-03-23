@@ -1,0 +1,182 @@
+
+
+<div >
+    <div class="row ml-4">
+        <div class="col-md-2">
+            <mat-form-field>
+                <mat-label>Contractor Name
+                </mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <mat-label>Code</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <mat-label>Region</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <mat-label>Taluk</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <mat-label>District</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <mat-label>Pan No</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <mat-form-field>
+                <mat-label>GST</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+        </div> 
+        <div class="col-md-2">
+            <mat-form-field class="dataWidth">
+                <mat-label>
+                    Month
+                </mat-label>
+                <input matInput format [matDatepicker]="picker" placeholder="Choose a date" formControlName="logDate" >
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-outline-primary bRadius">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-outline-primary bRadius">
+                search
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-outline-primary bRadius">
+                Download
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-outline-primary bRadius">
+                Upload
+            </button>
+        </div>
+    </div>
+   <div class="table-responsive ml-4">
+     <table class="table table-bordered">
+        <thead>
+            <th>Sno</th>
+            <th>Contractor Code and Name</th>
+            <th>Month</th>
+            <th>Amount</th>
+            <th>District</th>
+            <th>Region</th>
+            <th>Taluk</th>
+            <th>Pan</th>
+            <th>GST</th>
+            <th>Action</th>
+            <th class="checkBox">Bulk <span ><input type="checkbox"></span></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                  <mat-form-field >
+                    <mat-label>Employee</mat-label>
+                    <input matInput placeholder="employee"  autocomplete="off"
+                      readonly="true">
+                  </mat-form-field>
+
+                </td>
+                <td>
+                  <!-- <mat-form-field>
+                    <mat-label>PayComponent Type</mat-label>
+                    <mat-select > -->
+                      <!-- <mat-option *ngFor="let type of paycomponent_arrays" [value]="type.id">
+                        {{type.name}}
+                      </mat-option> -->
+                    <!-- </mat-select>
+
+                  </mat-form-field> -->
+                  <mat-form-field >
+                    <mat-label>Employee</mat-label>
+                    <input matInput placeholder="employee"  autocomplete="off"
+                      readonly="true">
+                  </mat-form-field>
+                </td>
+
+                <td>
+                  <mat-form-field>
+                    <mat-label>Active Date</mat-label>
+                    <input matInput [matDatepicker]="picker35" >
+                    <mat-datepicker-toggle matSuffix [for]="picker35"></mat-datepicker-toggle>
+                    <mat-datepicker #picker35></mat-datepicker>
+                  </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Amount</mat-label>
+                        <input matInput placeholder="amount"  autocomplete="off">
+    
+                      </mat-form-field>
+                </td>
+
+                <td>
+                  <mat-form-field>
+                    <mat-label>Amount</mat-label>
+                    <input matInput placeholder="amount"  autocomplete="off" readonly="true">
+
+                  </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field>
+                      <mat-label>Amount</mat-label>
+                      <input matInput placeholder="amount"  autocomplete="off" readonly="true">
+  
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field>
+                      <mat-label>Amount</mat-label>
+                      <input matInput placeholder="amount"  autocomplete="off" readonly="true">
+  
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field>
+                      <mat-label>Amount</mat-label>
+                      <input matInput placeholder="amount"  autocomplete="off" readonly="true">
+  
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field>
+                      <mat-label>Amount</mat-label>
+                      <input matInput placeholder="amount"  autocomplete="off" readonly="true">
+  
+                    </mat-form-field>
+                  </td>
+                  <td>
+                     <i fa-solid fa-pencil></i>
+                  </td>
+                  <td>
+                    <input type="checkbox" name="" id="">
+                  </td>
+              </tr>
+        </tbody>
+     </table>
+   </div>
+</div>

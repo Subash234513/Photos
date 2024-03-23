@@ -1,0 +1,15 @@
+<div class="flex">
+    <div class="mainPhoto">
+        <div class="BigImg" >
+            <img src='{{data}}' alt="">
+        </div>
+    </div>
+    <div class="ScrollBar" >
+        <div *ngFor="let data of List">
+            <div class="Img" (click)="Image(data)">
+                <img src='{{data}}' alt="">
+            </div>
+        </div>
+       
+    </div>
+</div>
