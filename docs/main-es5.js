@@ -272,9 +272,9 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
     /* harmony import */
 
 
-    var _photos_shower_photos_shower_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./photos-shower/photos-shower.component */
-    "./src/app/photos-shower/photos-shower.component.ts");
+    var _region_master_region_master_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./region-master/region-master.component */
+    "./src/app/region-master/region-master.component.ts");
 
     var AppComponent = /*#__PURE__*/_createClass(function AppComponent() {
       _classCallCheck(this, AppComponent);
@@ -293,10 +293,10 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
       vars: 0,
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-photos-shower");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-region-master");
         }
       },
-      directives: [_photos_shower_photos_shower_component__WEBPACK_IMPORTED_MODULE_1__["PhotosShowerComponent"]],
+      directives: [_region_master_region_master_component__WEBPACK_IMPORTED_MODULE_1__["RegionMasterComponent"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"]
     });
     /*@__PURE__*/
@@ -4042,7 +4042,7 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
         _classCallCheck(this, PhotosShowerComponent);
 
         this.data = '../../assets/wallpaper1.jpeg';
-        this.List = ['../../assets/wallpaper1.jpeg', '../../assets/wallpaper2.jpeg', '../../assets/wallpaper3.jpeg', '../../assets/wallpaper4.jpeg', '../../assets/wallpaper5.jpeg', '../../assets/wallpaper6.jpeg', '../../assets/wallpaper7.jpeg', '../../assets/wallpaper8.jpeg', '../../assets/wallpaper9.jpeg', '../../assets/wallpaper10.jpeg', '../../assets/wallpaper11.jpeg', '../../assets/wallpaper12.jpeg', '../../assets/wallpaper13.jpeg', '../../assets/wallpaper14.jpeg'];
+        this.List = ['/assets/wallpaper1.jpeg', '/assets/wallpaper2.jpeg', '/assets/wallpaper3.jpeg', '/assets/wallpaper4.jpeg', '/assets/wallpaper5.jpeg', '/assets/wallpaper6.jpeg', '/assets/wallpaper7.jpeg', '/assets/wallpaper8.jpeg', '/assets/wallpaper9.jpeg', '/assets/wallpaper10.jpeg', '/assets/wallpaper11.jpeg', '/assets/wallpaper12.jpeg', '/assets/wallpaper13.jpeg', '/assets/wallpaper14.jpeg'];
       }
 
       _createClass(PhotosShowerComponent, [{
